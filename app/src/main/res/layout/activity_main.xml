@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/b00"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(0,0)" />
+
+            <Button
+                android:id="@+id/b01"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(0,1)" />
+
+            <Button
+                android:id="@+id/b02"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(0,2)" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/b10"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(1,0)" />
+
+            <Button
+                android:id="@+id/b11"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(1,1)" />
+
+            <Button
+                android:id="@+id/b12"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(1,2)" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/b20"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(2,0)" />
+
+            <Button
+                android:id="@+id/b21"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(2,1)" />
+
+            <Button
+                android:id="@+id/b22"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="onClickTris"
+                android:textSize="36sp"
+                tools:text="(2,2)" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="Sfondo Tris"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tris" />
+
+    <Switch
+        android:id="@+id/switchMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text=" CPU  "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend"
+        android:textColor="@android:color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switchMod"
+        app:layout_constraintStart_toEndOf="@+id/switchMod" />
+
+    <Button
+        android:id="@+id/replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:enabled="false"
+        android:onClick="onClickReplay"
+        android:text="Rivincita"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:text="risultato" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchMod"
+        app:layout_constraintVertical_bias="0.702"
+        tools:text="Commento" />
+
+</android.support.constraint.ConstraintLayout>
